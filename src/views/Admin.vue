@@ -173,7 +173,12 @@
             sortable: true
           },
           {
-             key: 'delete',
+            key: 'email',
+            label: 'E-mail',
+            sortable: true
+          },
+          {
+            key: 'delete',
             label: 'Delete Message',
             sortable: true
           }

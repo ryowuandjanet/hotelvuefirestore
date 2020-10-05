@@ -17,7 +17,7 @@
             <i class="fas fa-door-open"></i> Check Reservation
           </b-button>
           <b-button
-            @click="modaldata2('Check Reservation','danger')"
+            @click="modaldata2('Cancel Reservation','danger')"
             size = "sm"
             class = "my-2 mr-2 my-sm-0"
           >
@@ -190,8 +190,8 @@
           price: ""
         },
         admin:{
-          user:"edward",
-          pass:"456789"
+          user:"ryowu",
+          pass:"ryowu"
         },
         admininput:{
           user:'',
@@ -291,8 +291,8 @@
         this.reservation.id = doc.id;
         this.reservation.name = doc2.data().name;
         this.reservation.email = doc2.data().email;
-        this.reservation.day = doc2.data().day;
-        this.reservation.price = doc2.data().price;
+        this.reservation.day = doc.data().day;
+        this.reservation.price = doc.data().price;
       }
     }
   }

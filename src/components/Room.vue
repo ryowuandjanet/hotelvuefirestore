@@ -88,7 +88,7 @@
                 <b-card-img :src="require('../assets/img4.jpg')" class="rounded-0"></b-card-img>
               </b-col>
               <b-col md="6">
-                <b-card-body class="text-warning" title="Deluxe">
+                <b-card-body class="text-dark" title="Deluxe">
                   <b-card-text class="text-dark">
                     <h2 class="mt-4">Deluxe Room</h2>
                     <h6 class="mt-4">1-7 Person</h6>
