@@ -25,7 +25,7 @@
           <h2 class="">Room - Single</h2>
           <b-img :src="require('@/assets/img1.jpg')" fluid alt="Responsive image"></b-img>
           <b-table :fields="fields" bordered striped hover :items="single">
-            <template v-solt:cell(delete)="row">
+            <template v-slot:cell(delete)="row">
               <b-button size="md" variant="danger" block @click="deletekey('Single',row.item.id)">
                 Delete Reservation
               </b-button>
@@ -37,7 +37,7 @@
           <h2 class="">Room - Double</h2>
           <b-img :src="require('@/assets/img2.jpg')" fluid alt="Responsive image"></b-img>
           <b-table :fields="fields" bordered striped hover :items="double">
-            <template v-solt:cell(delete)="row">
+            <template v-slot:cell(delete)="row">
               <b-button size="md" variant="danger" block @click="deletekey('Double',row.item.id)">
                 Delete Reservation
               </b-button>
@@ -49,7 +49,7 @@
           <h2 class="">Room - Family</h2>
           <b-img :src="require('@/assets/img3.jpg')" fluid alt="Responsive image"></b-img>
           <b-table :fields="fields" bordered striped hover :items="family">
-            <template v-solt:cell(delete)="row">
+            <template v-slot:cell(delete)="row">
               <b-button size="md" variant="danger" block @click="deletekey('Family',row.item.id)">
                 Delete Reservation
               </b-button>
@@ -61,7 +61,7 @@
           <h2 class="">Room - Deluxe</h2>
           <b-img :src="require('@/assets/img4.jpg')" fluid alt="Responsive image"></b-img>
           <b-table :fields="fields" bordered striped hover :items="deluxe">
-            <template v-solt:cell(delete)="row">
+            <template v-slot:cell(delete)="row">
               <b-button size="md" variant="danger" block @click="deletekey('Deluxe',row.item.id)">
                 Delete Reservation
               </b-button>
@@ -72,9 +72,9 @@
         <b-col cols="6">
           <h2 class="">Clients</h2>
           <b-table :fields="fieldsClient" bordered striped hover :items="clients">
-            <template v-solt:cell(delete)="row">
+            <template v-slot:cell(delete)="row">
               <b-button size="md" variant="danger" block @click="deletekey('clients',row.item.id)">
-                Delete Reservation
+                Delete Client
               </b-button>
             </template>
           </b-table>
@@ -83,9 +83,9 @@
         <b-col cols="6">
           <h2 class="">Contact</h2>
           <b-table :fields="fieldsMessage" bordered striped hover :items="messages">
-            <template v-solt:cell(delete)="row">
+            <template v-slot:cell(delete)="row">
               <b-button size="md" variant="danger" block @click="deletekey('messages',row.item.id)">
-                Delete Reservation
+                Delete Message
               </b-button>
             </template>
           </b-table>
@@ -185,7 +185,7 @@
         ]
       }
     },
-    create() {
+    created() {
       db.collection("Single")
         .onSnapshot((querySnapshot)=>{
           this.single=[];

@@ -24,7 +24,7 @@
             <i class="fas fa-window-close"></i> Cancel Reservation
           </b-button>
           <b-button
-            @click="modaldata2('contact','primary')"
+            @click="modaldata2('Contact','primary')"
             size = "sm"
             class = "my-2 mr-2 my-sm-0"
           >
